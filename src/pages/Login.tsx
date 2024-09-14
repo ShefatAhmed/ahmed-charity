@@ -47,7 +47,7 @@ const Login = () => {
         <h1 className="text-2xl my-10 uppercase">Please login here...</h1>
         <div className="mb-4">
           <label htmlFor="email" className="block text-sm font-semibold">
-            Email:
+            Email: admin@ahmedcharity.com
           </label>
           <input
             type="text"
@@ -60,7 +60,7 @@ const Login = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="password" className="block text-sm font-semibold">
-            Password:
+            Password: @@##aass
           </label>
           <input
             type="password"

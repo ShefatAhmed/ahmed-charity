@@ -7,7 +7,7 @@ const Popup = () => {
         const visited = localStorage.getItem("hasVisited");
         if (!visited) {
             setShowPopup(true);
-            localStorage.setItem("hasVisited", "true");  // Set that the user has visited
+            localStorage.setItem("hasVisited", "true");
         }
     }, []);
 
