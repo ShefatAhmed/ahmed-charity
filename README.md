@@ -2,6 +2,8 @@
 
 Welcome to the Ahmed Charity website! This guide will help you set up and use the website, built with React, TypeScript, Redux, and Tailwind CSS.
 
+### This is a polished version of my old project
+
 ## Installation and Setup
 
 ### 1. Clone Repositories
