@@ -1,43 +1,69 @@
-import { Home } from "lucide-react";
-import { Link } from "react-router-dom";
+import Sider from "antd/es/layout/Sider";
+import { Menu } from "antd";
+import { Home, PlusCircle, List, Star } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Topbar = () => {
+  const [collapsed, setCollapsed] = useState(false);
+  const location = useLocation();
   return (
-    <div className="bg-gradient-to-r from-teal-50 to-teal-600 pb-5">
-      <div className="flex justify-between items-center mx-24 py-5 md:gap-0 gap-5">
-        <Link
-          to="/dashboard"
-          className="text-5xl font-extrabold bg-black text-white px-5 py-2 rounded-tr-3xl rounded-bl-3xl shadow-2xl"
-        >
-          Dashboard
-        </Link>
-        <Link to="/" className="text-white rounded-full">
-          <Home />
-        </Link>
-      </div>
-      <div className="flex justify-center gap-10">
-        <Link
-          to="/dashboard/donations"
-          className="text-2xl font-bold bg-black text-white px-5 py-1 rounded-lg hover:bg-white hover:text-black"
-        >
-          All Donation
-        </Link>
-        <Link
-          to="/dashboard/create-donation"
-          className="text-2xl font-bold bg-black text-white px-5 py-1 rounded-lg hover:bg-white hover:text-black"
-        >
-          Create Donation
+    <Sider
+      collapsible
+      collapsed={collapsed}
+      onCollapse={(collapsed) => setCollapsed(collapsed)}
+      breakpoint="lg"
+      collapsedWidth="0"
+      style={{ height: "100vh", position: "sticky", top: "0", left: "0" }}
+    >
+      <div
+        style={{
+          color: "white",
+          height: "4rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Link to="/dashboard" className="font-extrabold text-lg flex">
+          <Home />Dashboard
         </Link>
       </div>
-      <div className=" flex justify-center mt-5">
-        <Link
-          to="/dashboard/create-testimonial"
-          className="text-2xl font-bold bg-black text-white px-5 py-1 rounded-lg hover:bg-white hover:text-black"
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "calc(100% - 4rem)",
+        }}
+      >
+        <Menu
+          theme="dark"
+          mode="inline"
+          defaultSelectedKeys={[location.pathname]}
+          style={{ flexGrow: 1 }}
         >
-          Create Testimonial
-        </Link>
+          <Menu.Item key="/dashboard/donations" icon={<List />}>
+            <Link to="/dashboard/donations">All Donations</Link>
+          </Menu.Item>
+          <Menu.Item key="/dashboard/create-donation" icon={<PlusCircle />}>
+            <Link to="/dashboard/create-donation">Create Donation</Link>
+          </Menu.Item>
+          <Menu.Item key="/dashboard/create-testimonial" icon={<Star />}>
+            <Link to="/dashboard/create-testimonial">Create Testimonial</Link>
+          </Menu.Item>
+        </Menu>
+        <Menu
+          theme="dark"
+          mode="inline"
+          style={{ borderTop: "1px solid #444" }}
+        >
+          <Menu.Item key="/" icon={<Home />}>
+            <Link to="/">Home</Link>
+          </Menu.Item>
+        </Menu>
       </div>
-    </div>
+    </Sider>
   );
 };
 

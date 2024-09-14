@@ -58,7 +58,7 @@ const CreateDonation = () => {
     <div className="flex items-center justify-center h-screen">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-md mx-auto p-4 shadow-md rounded-md border border-white"
+        className="w-full max-w-md mx-auto md:p-4 md:shadow-md rounded-md md:border border-white"
       >
         <h1 className="text-2xl my-10 uppercase">Add a donation</h1>
         <label className="block mb-2 text-sm font-semibold text-gray-600">

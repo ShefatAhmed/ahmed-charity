@@ -41,7 +41,7 @@ const CreateTestimonial = () => {
     <div className="container mx-auto p-8 max-w-lg">
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="md:border rounded md:px-8 pt-6 pb-8 mb-4"
       >
         <h2 className="text-2xl font-bold mb-6 text-center">
           Create A Testimonial
