@@ -22,6 +22,19 @@ const donationApi = baseApi.injectEndpoints({
         body: newData,
       }),
     }),
+    addDonationReview: builder.mutation({
+      query: ({ donationId, reviewData }) => ({
+        url: `/api/v1/donation/${donationId}/review`,
+        method: "POST",
+        body: reviewData,
+      }),
+    }),
+    getDonationReviews: builder.query({
+      query: (donationId) => ({
+        url: `/api/v1/donation/${donationId}/reviews`,
+        method: "GET",
+      }),
+    }),
     deleteDonation: builder.mutation({
       query: (donationId: string) => ({
         url: `/api/v1/donation/${donationId}`,
@@ -36,4 +49,6 @@ export const {
   useGetAllDonationQuery,
   useUpdateDonationMutation,
   useDeleteDonationMutation,
+  useAddDonationReviewMutation,
+  useGetDonationReviewsQuery
 } = donationApi;
