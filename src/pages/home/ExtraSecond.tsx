@@ -22,10 +22,10 @@ const ExtraSecond = () => {
         variants={variant}
         initial="hidden"
         animate="visible"
-        className="grid grid-cols-12 gap-10 px-5 py-24 items-center overflow-hidden"
+        className="grid grid-cols-12 py-16 px-[5%] gap-10 items-center overflow-hidden"
         style={backgroundImage}
       >
-        <div className="col-span-12 lg:col-span-6 mx-auto">
+        <div className="col-span-12 lg:col-span-5 mx-auto">
           <h1 className="uppercase text-2xl font-extrabold">
             Volunteering programs
           </h1>
@@ -34,7 +34,7 @@ const ExtraSecond = () => {
             you can learn more things about volunteering
           </p>
         </div>
-        <div className="col-span-12 lg:col-span-6">
+        <div className="col-span-12 lg:col-span-7">
           <div className="mb-5">
             <h1 className="flex gap-2 text-xl items-center font-bold">
               <Check className="text-teal-500" />

@@ -1,5 +1,6 @@
 import Gallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
+
 const images = [
   {
     original: "https://i.ibb.co.com/6mQ5ZtP/1.png",
@@ -32,18 +33,25 @@ const images = [
     description: "Donate food in flood disaster peoples.",
   },
 ];
+
 const GallerySection = () => {
   return (
-    <div className="container mx-auto my-8 p-4 rounded-md sm:px-8 lg:px-12 xl:px-16 overflow-hidden text-center">
-      <h2 className="text-3xl font-bold mb-4">
+    <div className="container mx-auto my-8 p-4 rounded-md text-center">
+      <h2 className="text-2xl md:text-3xl font-bold mb-4">
         Donation and Humanitarian Works Gallery
       </h2>
-      <p className="text-lg mb-8">
+      <p className="text-sm md:text-base mb-6 px-[30%]">
         Explore the impactful photos showcasing our donations and humanitarian
-        efforts, <br /> fostering transparency and trust among our users.
+        efforts, fostering transparency and trust among our users.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 gap-4">
-        <Gallery items={images} />
+      <div className="mx-auto md:max-w-[60vw]">
+        <Gallery
+          items={images}
+          showThumbnails={false}
+          showFullscreenButton={false}
+          showPlayButton={false}
+          additionalClass="rounded-lg shadow-lg"
+        />
       </div>
     </div>
   );

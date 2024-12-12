@@ -7,7 +7,7 @@ const DonationPost = () => {
   const donations = data ? data.slice(0, 6) : [];
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-16">
       <h1 className="text-center text-4xl font-bold mt-5">Donation Post</h1>
       <p className="text-center mx-24 mt-2">
         Here we can provide recent donation posts. You can see the donation

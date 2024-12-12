@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div>
       <div className="grid grid-cols-12 bg-gray-700 text-white py-10">
-        <div className="col-span-4 p-5">
+        <div className="col-span-5 py-5 px-5 md:px-24">
           <h1 className="font-extrabold text-xs">ABOUT AHMED CHARITY</h1>
           <div>
             <img
@@ -53,22 +53,22 @@ const Footer = () => {
             <hr className="bg-white" />
           </ul>
         </div>
-        <div className="col-span-5 p-8">
+        <div className="col-span-4 p-8">
           <h1 className="text-center font-extrabold">WE ARE NOW ON</h1>
-          <ul className="flex justify-center items-center mt-10">
-            <li className="hover:bg-blue-800 p-2 rounded-full bg-gray-700">
+          <ul className="md:flex justify-center items-center mt-10">
+            <li className="hover:bg-blue-800 flex justify-center p-2 rounded-full bg-gray-700">
               <FacebookIcon />
             </li>
-            <li className="hover:bg-blue-500 p-2 rounded-full bg-gray-700">
+            <li className="hover:bg-blue-500 flex justify-center p-2 rounded-full bg-gray-700">
               <TwitterIcon />
             </li>
-            <li className="hover:bg-blue-800 p-2 rounded-full bg-gray-700">
+            <li className="hover:bg-blue-800 flex justify-center  p-2 rounded-full bg-gray-700">
               <Linkedin />
             </li>
-            <li className="hover:bg-purple-800 p-2 rounded-full bg-gray-700">
+            <li className="hover:bg-purple-800 flex justify-center p-2 rounded-full bg-gray-700">
               <InstagramIcon />
             </li>
-            <li className="hover:bg-red-800 p-2 rounded-full bg-gray-700">
+            <li className="hover:bg-red-800 flex justify-center p-2 rounded-full bg-gray-700">
               <YoutubeIcon />
             </li>
           </ul>
