@@ -74,14 +74,6 @@ const Community = () => {
   return (
     <div className="mx-4 my-8 sm:mx-8 md:mx-16 lg:mx-24">
       <div className="border-2 border-gray-200 shadow-lg rounded-lg p-6">
-        <div className="flex items-center justify-center">
-          <button
-            className="btn glass bg-teal-500 rounded-lg text-white px-5 text-center hover:bg-teal-800 mx-3"
-            onClick={() => handleOpenModal()}
-          >
-            Write a Comment
-          </button>
-        </div>
         <h1 className="text-center font-bold mt-8">
           Here's our recent community comment
         </h1>
@@ -104,6 +96,14 @@ const Community = () => {
               {comment.comment && <hr className="my-3" />}
             </div>
           ))}
+        </div>
+        <div className="flex items-center justify-center">
+          <button
+            className="btn glass bg-teal-500 rounded-lg text-white px-5 text-center hover:bg-teal-800 mx-3"
+            onClick={() => handleOpenModal()}
+          >
+            Write a Comment
+          </button>
         </div>
       </div>
       <Modal
