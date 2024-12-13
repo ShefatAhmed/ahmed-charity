@@ -7,30 +7,35 @@ const AllDonations = () => {
   const donations = data || [];
 
   return (
-    <div className="overflow-hidden">
-      <h1 className="text-center text-2xl font-extrabold uppercase my-5">
-        Here is all donations
+    <div className="overflow-hidden px-4 sm:px-6 lg:px-8 py-16">
+      <h1 className="text-center text-2xl font-extrabold uppercase my-8">
+        Here are all donations
       </h1>
-      <div className="my-10 grid grid-cols-12 mx-auto gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {donations.map((donation: any) => (
           <div
             key={donation._id}
-            className="max-w-md mx-auto rounded-xl overflow-hidden shadow-lg col-span-12 md:col-span-6 lg:col-span-4 w-[400px] border border-white"
+            className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
           >
             <img
               className="w-full h-56 object-cover"
               src={donation.image}
-              alt="Card Image"
+              alt={donation.title}
             />
-            <div className="p-6">
-              <h1 className="text-xl font-semibold mb-2">{donation.title}</h1>
-              <div className="flex justify-between mb-2">
-                <p className="text-sm mr-2">{donation.category}</p>
-                <p className="text-sm">${donation.amount}</p>
+            <div className="p-5">
+              <h1 className="text-lg font-semibold mb-2 text-gray-800">
+                {donation.title}
+              </h1>
+              <div className="flex justify-between items-center mb-4 text-gray-600">
+                <span className="text-sm capitalize">{donation.category}</span>
+                <span className="text-sm font-medium">${donation.amount}</span>
               </div>
-              <button className="w-full btn glass bg-teal-500 rounded-lg text-white px-10 hover:bg-teal-800 text-lg">
-                <Link to={`/donations/${donation._id}`}>View Detail</Link>
-              </button>
+              <Link
+                to={`/donations/${donation._id}`}
+                className="w-full btn glass bg-teal-500 rounded-lg text-white px-10 hover:bg-teal-800 text-lg"
+              >
+                View Detail
+              </Link>
             </div>
           </div>
         ))}
